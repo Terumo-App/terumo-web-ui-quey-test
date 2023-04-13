@@ -1,4 +1,4 @@
-name: Test
+name: Linter and Test coverage
 
 on:
   pull_request:
