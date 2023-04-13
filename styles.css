@@ -1,104 +1,154 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #f7f7f7;
-  }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.upload-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.button:hover {
+  background-color: #444;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.drag-drop-container {
+  width: 100%;
+  height: 100px;
+  border: 2px dashed #aaa;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.drag-drop-text {
+  font-size: 18px;
+  color: #aaa;
+}
+
+.upload-container {
+  display: flex;
+
+  width: 45%;
+  min-width: 300px;
+  /* adjust as needed */
+  height: 500px;
+  margin: 10px;
+
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  width: 90%;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.upload-container:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+}
+
+#preview {
+  max-width: 200px;
+  margin-top: 20px;
+}
+
+button {
+  background-color: #333;
+  color: #fff;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.global-caontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 70%;
+  width: 90%;
+}
+
+.results-container {
+  width: 550px;
+  height: 100%;
+  /* adjust as needed */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  overflow: auto;
+  /* set container height to viewport height */
+  margin: 10px;
+  /* adjust as needed */
+}
+
+.result-image {
+  width: 150px;
+
+}
+
+
+.result-item {
+  width: 260px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: box-shadow 0.3s ease-in-out;
+ 
   
-  h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-  }
-  
-  .upload-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .button {
-    background-color: #333;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    margin-bottom: 10px;
-  }
-  
-  .button:hover {
-    background-color: #444;
-  }
-  
-  label {
-    display: block;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #333;
-  }
-  
-  input[type="file"] {
-    display: none;
-  }
-  
-  .drag-drop-container {
-    width: 100%;
-    height: 100px;
-    border: 2px dashed #aaa;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .drag-drop-text {
-    font-size: 18px;
-    color: #aaa;
-  }
-  
-  .upload-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    width: 90%;
-    max-width: 600px;
-    margin: 0 auto;
-    text-align: center;
-  }
-  
-  .upload-container:hover {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
-  }
-  
-  #preview {
-    max-width: 100%;
-    margin-top: 20px;
-  }
-  
-  button {
-    background-color: #333;
-    color: #fff;
-    font-size: 18px;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  
+}
+
+.result-item:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
